@@ -4,14 +4,13 @@ import React, {useState} from 'react'
  
 function App() {
  
-  // state
   const [weight, setWeight] = useState(0)
   const [height, setHeight] = useState(0)
   const [bmi, setBmi] = useState('')
   const [message, setMessage] = useState('')
  
   let calcBmi = (event) => {
-    //prevent submitting to the server
+    
     event.preventDefault()
  
     if (weight === 0 || height === 0) {
