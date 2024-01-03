@@ -37,6 +37,7 @@ function App() {
   }
  
   return (
+    <>
     <div className="app">
     <div className='container'>
       <h2 className='center'>BMI Calculator</h2>
@@ -64,6 +65,8 @@ function App() {
       </div>
     </div>
   </div>
+  <div className="footer"> <h1>Made with Love</h1></div>
+  </>
   );
 }
  
