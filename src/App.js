@@ -4,8 +4,8 @@ import React, {useState} from 'react'
  
 function App() {
  
-  const [weight, setWeight] = useState(0)
-  const [height, setHeight] = useState(0)
+  const [weight, setWeight] = useState()
+  const [height, setHeight] = useState()
   const [bmi, setBmi] = useState('')
   const [message, setMessage] = useState('')
  
@@ -45,12 +45,12 @@ function App() {
  
         <div>
           <label>Weight (lbs)</label>
-          <input value={weight} onChange={(e) => setWeight(e.target.value)} />
+          <input value={weight} placeholder='0' onChange={(e) => setWeight(e.target.value)} />
         </div>
  
         <div>
           <label>Height (in)</label>
-          <input value={height} onChange={(event) => setHeight(event.target.value)} />
+          <input value={height} placeholder='0' onChange={(event) => setHeight(event.target.value)} />
         </div>
  
         <div>
@@ -60,8 +60,8 @@ function App() {
       </form>
  
       <div className='center'>
-        <h3>Your BMI is: {bmi}</h3>
-        <p>{message}</p>
+        <h2>Your BMI is: {bmi}</h2>
+        <h3>{message}</h3>
       </div>
     </div>
   </div>
